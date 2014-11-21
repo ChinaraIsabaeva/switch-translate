@@ -18,12 +18,14 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return render_template('home.html')
+    
 
-@app.route('/', methods=['POST'])
+@app.route('/#', methods=['POST'])
 def my_form_post():
     text = request.form['text']
-    new_text = translate(text)
-    return new_text    
+    result = translate(text)
+    return jsonify(result=result)
+    
 
 if __name__ == '__main__':
     app.run()

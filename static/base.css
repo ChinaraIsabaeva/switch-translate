@@ -1,0 +1,30 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  margin: 20px;
+  padding: 10px; }
+  body .content {
+    margin-top: 10px;
+    margin-bottom: auto;
+    margin-left: 30px;
+    margin-right: auto;
+    height: auto;
+    width: auto; }
+    body .content .form {
+      float: left;
+      margin: auto; }
+    body .content .result {
+      float: left;
+      margin: auto; }
+    body .content .form_block {
+      margin: 1px; }
+      body .content .form_block #input {
+        margin: 2px;
+        padding: 2px;
+        height: 100px;
+        width: 450px; }
+      body .content .form_block #button {
+        margin: 2px;
+        padding: 2px;
+        float: right; }
+
+/*# sourceMappingURL=base.css.map */
