@@ -1,9 +1,10 @@
 $(function() {
-    $('#button').click(function() {
+    $('#button').submit(function(e) {
+	e.preventDefault(e);
         $.ajax({
-	    url: '/#',
+	    url: '/',
             type: 'POST',
-            success: function(response) {
+            success: function() {
                 $('.result').show();
             }        
         });

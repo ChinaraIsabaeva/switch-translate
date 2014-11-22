@@ -15,16 +15,19 @@ def translate(text):
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def home():
-    return render_template('home.html')
-    
+    if request.method == 'POST':
+        text = request.form['text']
+        result = translate(text)
+        return render_template('home.html', result=result)
+    else:
+        return render_template('home.html')
 
-@app.route('/#', methods=['POST'])
+
 def my_form_post():
-    text = request.form['text']
-    result = translate(text)
-    return jsonify(result=result)
+    
+    return render_template('home.html', result=result)
     
 
 if __name__ == '__main__':
