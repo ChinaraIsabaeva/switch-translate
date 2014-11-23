@@ -3,32 +3,30 @@
 <head>
     <title>Switch translate</title>
     <link media="all">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='reset.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='base.css')}}">
+    <link rel="stylesheet" type="text/css" href="static/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="static/base.css">
 </head>
 
 <body>
     <div class="content">
 	<div class="form">
-	    <form action=''  method='post'>
+	    <form action='#'  method='post'>
 		<div class="form_block">
-		    <textarea id="input"  name="text" placeholder="enter text here"></textarea>
+		    <textarea id="input" name="text" placeholder="enter text here"></textarea>
 		</div>
 		
 		<div class="form_block">
-		    <button id="button" type="submit">Give me correct text</button>
+		    <input id="button" type="button" value="Give me correct text">
 		</div>
 	    </form>
 	</div>
 
 	<div class="result">
-	    {{ result }}
 	</div>
     </div>
 
+<script src="static/jquery.js"></script>
+<script src="static/script.js"></script>
+
 </body>
-
-<script src="{{ url_for('static', filename='jquery.js') }}"></script>
-<script src="{{ url_for('static', filename='script.js')}}"></script>
-
 </html>

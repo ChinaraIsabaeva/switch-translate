@@ -9,26 +9,20 @@ letters = {'q': 'й', 'w': 'ц', 'e' :'у', 'r' :'к', 't' :'е', 'y' :'н', 'u'
 def translate(text):
     rus_text = ''
     for char in text:
-        
         rus_text += letters[char]
     return rus_text
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET', 'POST'])
+
+@app.route('/')
 def home():
-    if request.method == 'POST':
-        text = request.form['text']
-        result = translate(text)
-        return render_template('home.html', result=result)
-    else:
-        return render_template('home.html')
+    return render_template('home.html')
 
-
+@app.route('/', methods=['POST'])
 def my_form_post():
-    
-    return render_template('home.html', result=result)
-    
+    result = translate(request.form['text'])
+    return result
 
 if __name__ == '__main__':
     app.run()

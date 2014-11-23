@@ -14,7 +14,7 @@ body {
       margin: auto; }
     body .content .result {
       float: left;
-      margin: auto; }
+      margin-left: 100px; }
     body .content .form_block {
       margin: 1px; }
       body .content .form_block #input {
