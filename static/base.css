@@ -9,19 +9,26 @@ body {
     margin-right: auto;
     height: auto;
     width: auto; }
-    body .content .form {
+    body .content .column {
       float: left;
-      margin: auto; }
-    body .content .result {
-      float: left;
-      margin-left: 100px; }
-    body .content .form_block {
-      margin: 1px; }
-      body .content .form_block #input {
+      margin-top: auto;
+      margin-botom: auto;
+      margin-left: 50px;
+      margin-right: 50px; }
+      body .content .column h6 {
+        margin: 3px;
+        padding: 3px;
+        color: #460C52; }
+      body .content .column #input, body .content .column #result {
         margin: 2px;
         padding: 2px;
         height: 100px;
         width: 450px; }
+      body .content .column #result {
+        color: #083A27;
+        font: Helvetica; }
+    body .content .form_block {
+      margin: 1px; }
       body .content .form_block #button {
         margin: 2px;
         padding: 2px;

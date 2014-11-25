@@ -11,27 +11,38 @@ body
     height: auto
     width: auto
 
-    .form
+    .column
       float: left
-      margin: auto
+      margin-top: auto
+      margin-botom: auto
+      margin-left: 50px
+      margin-right: 50px
 
-    .result
-      float: left
-      margin-left: 100px
-    
-    .form_block
-      margin: 1px
-
+      h6
+        margin: 3px
+        padding: 3px
+        color: #460C52
+      
       #input
         margin: 2px
         padding: 2px
         height: 100px
         width: 450px
-    
+
+      #result
+        @extend #input
+        color: #083A27
+        font: Helvetica
+
+    .form_block
+      margin: 1px
+
       #button
         margin: 2px
         padding: 2px
         float: right
-  
+
+
+
 
      
