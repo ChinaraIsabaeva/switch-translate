@@ -1,14 +1,26 @@
+html {
+  height: 100%; }
+
 body {
   font: 100% Helvetica, sans-serif;
-  margin: 20px;
-  padding: 10px; }
+  width: 100%;
+  height: 100%;
+  position: relative; }
+  body .nav {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase; }
+    body .nav a {
+      color: #338533;
+      text-decoration: none; }
+    body .nav h3 {
+      font: "Lucida Console", Monaco, monospace;
+      font-size: 15px; }
   body .content {
-    margin-top: 10px;
-    margin-bottom: auto;
-    margin-left: 30px;
-    margin-right: auto;
-    height: auto;
-    width: auto; }
+    margin: 10px;
+    height: 100%;
+    width: 100%; }
     body .content .column {
       float: left;
       margin-top: auto;
@@ -16,22 +28,26 @@ body {
       margin-left: 50px;
       margin-right: 50px; }
       body .content .column h6 {
-        margin: 3px;
+        margin: 10px;
         padding: 3px;
-        color: #460C52; }
+        color: #006600; }
       body .content .column #input, body .content .column #result {
-        margin: 2px;
-        padding: 2px;
-        height: 100px;
+        margin: 10px;
+        padding: 3px;
+        height: 200px;
         width: 450px; }
       body .content .column #result {
         color: #083A27;
         font: Helvetica; }
     body .content .form_block {
-      margin: 1px; }
+      margin: 2px; }
       body .content .form_block #button {
-        margin: 2px;
-        padding: 2px;
-        float: right; }
+        margin: 10px;
+        padding: 5px;
+        float: right;
+        background-color: #006600;
+        color: #FFFFFF;
+        border: 2px solid #003300;
+        border-radius: 5px; }
 
 /*# sourceMappingURL=base.css.map */
