@@ -4,35 +4,26 @@ import os
 import unittest
 import switch_translate
 from flask import json
-from lib.translate import eng_translate, ru_translate
+from lib.translate import translate
 
 class TranslitTestCase(unittest.TestCase):
     def setUp(self):
-        self.text_one = u'ghjdthrf heccrjuj ntrcnf'
-        self.text_two = u'срусл утпдшыр еуче'
-   
-    def test_one(self):
-        result = eng_translate(self.text_one)
-        self.assertEqual(result, 'проверка русского текста')
+        self.text = u'ghjdthrf ищер дфтпгфпуы'
 
-    def test_two(self):
-        result = ru_translate(self.text_two)
-        self.assertEqual(result, 'check english text')
+    def test_translate(self):
+        result = translate(self.text)
+        self.assertEqual(result, u'проверка both languages')
 
 
 class Switch_tranlateTestCase(unittest.TestCase):
     def setUp(self):
         self.app = switch_translate.app.test_client()
-        self.text_one = 'ghjdthztv heccrbq ntrcn'
-        self.text_two = u'срусл утпдшыр еуче'
+        self.text = 'ghjdthrf ищер дфтпгфпуы'
 
     def test_eng(self):
-        response = self.app.post('/', data=json.dumps({'text':  self.text_one}), content_type='application/json')
-        self.assertEquals(response.get_data(), 'проверяем русский текст') 
+        response = self.app.post('/', data=json.dumps({'text':  self.text}), content_type='application/json')
+        self.assertEquals(response.get_data(), 'проверка both languages') 
 
-    def test_ru(self):
-        response = self.app.post('/ru', data=json.dumps({'text':  self.text_two}), content_type='application/json')
-        self.assertEquals(response.get_data(), 'check english text') 
       
 if __name__ == '__main__':
     unittest.main()
