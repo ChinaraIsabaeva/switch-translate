@@ -6,6 +6,7 @@ import switch_translate
 from flask import json
 from lib.translate import translate
 
+
 class TranslitTestCase(unittest.TestCase):
     def setUp(self):
         self.text = u'ghjdthrf ищер дфтпгфпуы'

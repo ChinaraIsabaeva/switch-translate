@@ -2,6 +2,7 @@
 
 from letters import letters
 
+
 def translate(text):
     result = ''
     for char in text:
