@@ -3,10 +3,10 @@
 from flask import Flask
 from flask import request
 from flask import render_template
-from flask import jsonify
 from lib.translate import translate
 
 app = Flask(__name__)
+
 
 @app.route('/', methods=['GET', 'POST'])
 def home():

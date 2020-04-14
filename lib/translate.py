@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from letters import letters
+from .letters import letters
 
 
 def translate(text):
